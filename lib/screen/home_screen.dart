@@ -1,4 +1,5 @@
 import 'package:bdki_landing/themes/text_styles.dart';
+import 'package:bdki_landing/widgets/image_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -135,7 +136,8 @@ class HomeScreen extends StatelessWidget {
                             ButtonMenuContainer(assetPath: 'assets/images/img_event.png', nameMenu: 'Event',),
                           ],
                         ),
-                      )
+                      ),
+                      ImageSlider()
                     ],
                   ),
                 ),
