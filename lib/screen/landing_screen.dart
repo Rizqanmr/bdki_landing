@@ -1,3 +1,4 @@
+import 'package:bdki_landing/widgets/bottom_navbar.dart';
 import 'package:bdki_landing/themes/colors.dart';
 import 'package:bdki_landing/themes/text_styles.dart';
 import 'package:bdki_landing/widgets/country_circle.dart';
@@ -101,46 +102,62 @@ class _LandingScreenState extends State<LandingScreen> {
                 style: mediumText.copyWith(foreground: Paint()..shader = textGradient),
               ),
               const SizedBox(height: 38,),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 37.5),
-                padding: const EdgeInsets.symmetric(vertical: 6.5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  border: Border.all(color: Colors.yellow, width: 2),
-                  gradient: const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      darkOrange,
-                      lightOrange,
-                    ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const BottomNavbar()),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 37.5),
+                  padding: const EdgeInsets.symmetric(vertical: 6.5),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25.0),
+                    border: Border.all(color: Colors.yellow, width: 2),
+                    gradient: const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        darkOrange,
+                        lightOrange,
+                      ],
+                    ),
                   ),
-                ),
-                child: Text(
-                    'Continue as a Guest',
-                    textAlign: TextAlign.center,
-                    style: extraLargeText.copyWith(color: Colors.white)
+                  child: Text(
+                      'Continue as a Guest',
+                      textAlign: TextAlign.center,
+                      style: extraLargeText.copyWith(color: Colors.white)
+                  ),
                 ),
               ),
               const SizedBox(height: 16,),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 37.5),
-                padding: const EdgeInsets.symmetric(vertical: 6.5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  border: const GradientBoxBorder(
-                      gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [Colors.yellow, lightRed]
-                      ),
-                      width: 2
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const BottomNavbar()),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 37.5),
+                  padding: const EdgeInsets.symmetric(vertical: 6.5),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25.0),
+                    border: const GradientBoxBorder(
+                        gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [Colors.yellow, lightRed]
+                        ),
+                        width: 2
+                    ),
                   ),
-                ),
-                child: Text(
-                    'Continue as a Guest',
-                    textAlign: TextAlign.center,
-                    style: extraLargeText.copyWith(color: lightRed)
+                  child: Text(
+                      'Continue as a Guest',
+                      textAlign: TextAlign.center,
+                      style: extraLargeText.copyWith(color: lightRed)
+                  ),
                 ),
               ),
               Expanded(

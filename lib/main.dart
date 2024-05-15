@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: darkOrange),
-        useMaterial3: true,
+        useMaterial3: false,
       ),
       home: const SplashScreen(),
     );
